@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-#My Script by danrfq
-#Support by My Beloved Team Ꭲ̡̦͎͇͈̘̻̎̉̅́̒͗ͅϵѧᴍ̸̩̟̗͎̯͙̺̺̜̬̙̟̀̑̓͋̐͆͌̓̒́̒͗͒͑̚͟͜ᎶʀҽѧᴛᏴøᴛ̢͓̹̗̘̠̪̖͗̃̄̅̆̽̀̕͜͞
-#i'm Owner Ꭲ̡̦͎͇͈̘̻̎̉̅́̒͗ͅϵѧᴍ̸̩̟̗͎̯͙̺̺̜̬̙̟̀̑̓͋̐͆͌̓̒́̒͗͒͑̚͟͜ᎶʀҽѧᴛᏴøᴛ̢͓̹̗̘̠̪̖͗̃̄̅̆̽̀̕͜͞
+#My Script by dhifa
+#Support by My Beloved Team 
+#i'm Owner 
 
 import LINETCR
 from LINETCR.lib.curve.ttypes import *
@@ -19,6 +19,7 @@ import goslate
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
+#cl.login(token="tokenmu")
 cl.loginResult()
 
 print "Login Success Boss"
@@ -143,9 +144,9 @@ wait = {
     'leaveRoom':True,
     'timeline':True,
     'autoAdd':True,
-    'message':" Thank For Add Me\n\nCreatorn\nline://ti/p/~boy29putra",
+    'message':" Thank For Add Me",
     "lang":"JP",
-    "comment":"Auto Like by (􀠁􀠁☆─┅═ই╬Babang_Adhi ☆)(2 s",
+    "comment":"Auto Like by (􀠁􀠁☆─┅═ই╬dhifa ☆)(2 s",
     "commentOn":True,
     "likeOn":True,
     "commentBlack":{},
