@@ -629,7 +629,7 @@ function App() {
               <button className="btn" style={{ background: "var(--panel)" }} onClick={copyJson}>Copy JSON</button>
             </div>
             {sync && (
-              <div className="w-full flex flex-col gap-2 p-3 text-xs" style={{ background: "var(--panel)", border: "1px solid var(--line)", borderRadius: 2, backdropFilter: "blur(8px)" }}>
+              <div className="w-full flex flex-col gap-2 p-3 text-xs" style={{ background: "var(--panel)", border: "1px solid var(--line)", borderRadius: 2, backdropFilter: "blur(8px)", maxHeight: "calc(100vh - 160px)", overflowY: "auto" }}>
                 <p className="m-0 leading-relaxed" style={{ color: "var(--fog)" }}>
                   Putar lagu, lalu tekan <b style={{ color: "var(--bone)" }}>Spasi</b> tepat saat tiap baris mulai dinyanyikan. Saat lagu berhenti, Spasi = Play.
                 </p>
