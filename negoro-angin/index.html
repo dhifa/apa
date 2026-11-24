@@ -88,35 +88,27 @@ const bar = (n) => +(FIRST_BEAT + n * BAR).toFixed(2);
    font          : (opsional) 'montserrat' untuk Montserrat ExtraBold
    camera        : (opsional) 'push' | 'whip' | 'dive' — default ikut animasi
 
-   CATATAN: teks di bawah masih PLACEHOLDER. Timestamp sudah ditaruh di
-   awal tiap bar (grid 130 BPM) sebagai titik awal kalibrasi. Ganti teksnya
-   di sini atau lewat panel "Sync" > tempel lirik, lalu Tap to Sync.
+   CATATAN: teks dan timestamp di bawah berasal dari transkripsi otomatis
+   (speech-to-text) atas file audio. Bagian awal cukup jelas; baris yang
+   diberi tanda (?) kemungkinan salah dengar — betulkan teksnya di sini
+   atau lewat panel "Sync" > tempel lirik, lalu rapikan dengan Tap to Sync.
    --------------------------------------------------------------------- */
 const lyrics = [
   // INTRO
-  { time: bar(0),  text: "NEGORO *Angin*",                    animationType: "scale-slam",   position: "center",       section: "intro" },
-  // BAIT 1
-  { time: bar(1),  text: "BAIT 1 BARIS 1 *ganti lirik*",       animationType: "whip-in",      position: "left",         section: "bait-1" },
-  { time: bar(2),  text: "BAIT 1 BARIS 2 *ganti lirik*",       animationType: "word-stagger", position: "center",       section: "bait-1" },
-  { time: bar(3),  text: "BAIT 1 BARIS 3 *ganti lirik*",       animationType: "scale-slam",   position: "bottom",       section: "bait-1", font: "montserrat" },
-  { time: bar(4),  text: "BAIT 1 BARIS 4 *ganti lirik*",       animationType: "3d-depth",     position: "center",       section: "bait-1" },
-  { time: bar(5),  text: "BAIT 1 BARIS 5 *ganti lirik*",       animationType: "whip-in",      position: "right",        section: "bait-1" },
-  { time: bar(6),  text: "BAIT 1 BARIS 6 *ganti lirik*",       animationType: "word-stagger", position: "center",       section: "bait-1" },
-  { time: bar(7),  text: "BAIT 1 BARIS 7 *ganti lirik*",       animationType: "scale-slam",   position: "top",          section: "bait-1", font: "montserrat" },
-  // TRANSISI (bas menipis di 15–17,5 dtk)
-  { time: bar(8),  text: "TRANSISI BARIS 1 *ganti lirik*",     animationType: "3d-depth",     position: "center",       section: "transisi" },
-  { time: bar(9),  text: "TRANSISI BARIS 2 *ganti lirik*",     animationType: "word-stagger", position: "center",       section: "transisi" },
-  // REFF (bas masuk lagi di ±18 dtk)
-  { time: bar(10), text: "REFF BARIS 1 *ganti lirik*",         animationType: "scale-slam",   position: "center",       section: "reff" },
-  { time: bar(11), text: "REFF BARIS 2 *ganti lirik*",         animationType: "whip-in",      position: "bottom-left",  section: "reff" },
-  { time: bar(12), text: "REFF BARIS 3 *ganti lirik*",         animationType: "3d-depth",     position: "center",       section: "reff" },
-  { time: bar(13), text: "REFF BARIS 4 *ganti lirik*",         animationType: "word-stagger", position: "center",       section: "reff" },
-  { time: bar(14), text: "REFF BARIS 5 *ganti lirik*",         animationType: "whip-in",      position: "top-right",    section: "reff" },
-  { time: bar(15), text: "REFF BARIS 6 *ganti lirik*",         animationType: "scale-slam",   position: "center",       section: "reff", font: "montserrat" },
-  { time: bar(16), text: "REFF BARIS 7 *ganti lirik*",         animationType: "3d-depth",     position: "center",       section: "reff" },
-  { time: bar(17), text: "REFF BARIS 8 *ganti lirik*",         animationType: "word-stagger", position: "center",       section: "reff" },
+  { time: 0.10,  text: "NEGORO *Angin*",                 animationType: "scale-slam",   position: "center",      section: "intro" },
+  // BAIT
+  { time: 1.08,  text: "ISIH TAK *kangeni*",              animationType: "whip-in",      position: "left",        section: "bait" },
+  { time: 4.32,  text: "ISIH TAK *tunggani*",             animationType: "scale-slam",   position: "right",       section: "bait", font: "montserrat" },
+  { time: 7.96,  text: "ISIH TAK *tangisi*",              animationType: "whip-in",      position: "left",        section: "bait" },
+  { time: 10.72, text: "KENANGAN SING *wingi*",           animationType: "word-stagger", position: "center",      section: "bait" },
+  // LANJUTAN (bas masuk lagi di ±18 dtk) — baris bertanda (?) kurang jelas di transkrip
+  { time: 15.84, text: "TAK *pungkiri*",                  animationType: "3d-depth",     position: "center",      section: "lanjutan" },
+  { time: 17.64, text: "MULO LIYAI-LIYAI *ati*",          animationType: "scale-slam",   position: "center",      section: "lanjutan" },   // (?)
+  { time: 21.84, text: "TERPENDAM *rasahmi*",             animationType: "whip-in",      position: "bottom-left", section: "lanjutan" },   // (?)
+  { time: 25.54, text: "INGINNYA *ngutami*",              animationType: "3d-depth",     position: "center",      section: "lanjutan" },   // (?)
+  { time: 29.62, text: "RING WES *sayang*",               animationType: "word-stagger", position: "center",      section: "lanjutan" },   // (?)
   // OUTRO (hentakan terakhir di 33,3 dtk)
-  { time: bar(18), text: "NEGORO *Angin*",                    animationType: "scale-slam",   position: "center",       section: "outro" },
+  { time: 33.30, text: "NEGORO *Angin*",                 animationType: "scale-slam",   position: "center",      section: "outro" },
 ];
 
 const ANIMS = ["whip-in", "scale-slam", "3d-depth", "word-stagger"];
